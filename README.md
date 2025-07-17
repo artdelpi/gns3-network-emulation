@@ -188,7 +188,7 @@ GNS3-NETWORK-EMULATION/
 | **Captura**       | `tcpdump -i eth0 -w cap.pcap` |
 | **Reiniciar rede** | `systemctl restart networking` |
 
-## Autor
+## Autores
 
-Arthur Barbabella – 7º semestre de Ciência da Computação – Universidade de Brasília (UnB)  
+Arthur Delpino Barbabella e Marcelo Marques Rodrigues – 7º semestre de Ciência da Computação – Universidade de Brasília (UnB)  
 E-mail: *[artdelpi@gmail.com]*
