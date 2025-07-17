@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Configura IP das interfaces
+/root/config-router1.sh &
+
+# Regras de firewall
+/root/config-firewall-router1.sh &
+
+# Roteamento entre sub-redes
+ip route add 172.16.0.0/24 via 192.168.0.2 dev ens5
+ip route add 192.168.0.0/24 via 192.168.0.2 dev ens5
+
+# Ativa o encaminhamento de pacotes
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+exit 0

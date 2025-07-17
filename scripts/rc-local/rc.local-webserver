@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Configura IP e rota
+/root/config-webserver.sh &
+
+# Espera a interface de rede subir
+sleep 3
+
+# Inicia o servidor HTTP em background
+cd /home/debian/meu_site
+python3 -m http.server 80 &
+
+exit 0

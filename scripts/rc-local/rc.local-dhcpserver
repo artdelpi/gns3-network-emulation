@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Configura IP e rota
+/root/config-dhcpserver.sh &
+
+# Inicia o serviço DHCP
+sleep 2
+systemctl restart isc-dhcp-server
+
+exit 0

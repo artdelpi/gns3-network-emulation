@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Configura IP e rota
+/root/config-router2.sh &
+
+# Ativa o DHCP Relay com destino ao IP do DHCPServer
+dhcrelay -i ens6 -i ens5 10.0.30.1 &
+
+exit 0
