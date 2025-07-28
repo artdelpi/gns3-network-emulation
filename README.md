@@ -5,16 +5,6 @@
 
 ---
 
-## Sumário
-1. [Visão Geral](#-visão-geral)
-2. [Arquitetura de Rede](#-arquitetura-de-rede)
-3. [Implementação Técnica](#-implementação-técnica)
-4. [Testes de Validação](#-testes-de-validação)
-5. [Estrutura do Repositório](#-estrutura-do-repositório)
-6. [Como Executar](#-como-executar)
-
----
-
 ## Visão Geral
 
 Este projeto emula uma rede corporativa segmentada com:
@@ -88,18 +78,6 @@ Scripts específicos foram criados para cada nó da rede e podem ser encontrados
 **Legenda:**
 - `68→67` = Porta de origem 68 → Porta de destino 67
 - Políticas padrão: `INPUT DROP`, `OUTPUT ACCEPT`, `FORWARD DROP`
-
-### Diagrama de Fluxo
-sequenceDiagram
-    participant Cliente as Estação (172.16.0.100)
-    participant Firewall as Router1
-    participant Servidor as WebServer (10.0.30.100)
-    Cliente->>Firewall: HTTP GET /
-    Firewall->>Servidor: Encaminha requisição
-    Servidor-->>Firewall: HTTP 200 OK
-    Firewall-->>Cliente: Resposta filtrada
-
----
 
 ## Testes de Validação
 
